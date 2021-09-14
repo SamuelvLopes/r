@@ -2,7 +2,7 @@
 
 library('rvest')
 
-url <- 'http://localhost/j/representantes_estado.html'
+url <- 'https://pratics.org/representantes_estado.html'
 
 site <- read_html(url)
 
@@ -22,13 +22,5 @@ lista_tabela <- site %>%
 str(lista_tabela)
 
 head(lista_tabela[[1]], 10)
-library(RColorBrewer)
-library(plotrix)
-library(RColorBrewer)
-#display.brewer.all()
-COR6<-brewer.pal(6,"YlGnBu")
-library(bubbles)
-bubbles(value = lista_tabela[[1]]$Estado,
-        color = COR6,
-        label = lista_tabela[[1]]$Estado,
-        width=800, height=800)
+
+pie(table(lista_tabela[[1]]$Estado),radius=2.5)
