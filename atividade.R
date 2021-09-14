@@ -24,5 +24,11 @@ str(lista_tabela)
 head(lista_tabela[[1]], 10)
 library(RColorBrewer)
 library(plotrix)
-pie3D(table(lista_tabela[[1]]$Estado),labels =lista_tabela[[1]][[2]],main="Politicos por estado",radius=3.2)
-
+library(RColorBrewer)
+#display.brewer.all()
+COR6<-brewer.pal(6,"YlGnBu")
+library(bubbles)
+bubbles(value = lista_tabela[[1]]$Estado,
+        color = COR6,
+        label = lista_tabela[[1]]$Estado,
+        width=800, height=800)
