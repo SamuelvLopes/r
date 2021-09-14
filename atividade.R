@@ -24,5 +24,5 @@ str(lista_tabela)
 head(lista_tabela[[1]], 10)
 library(RColorBrewer)
 library(plotrix)
-pie3D(table(lista_tabela[[1]]$Estado),main="Politicos por estado")
+pie3D(table(lista_tabela[[1]]$Estado),labels =lista_tabela[[1]][[2]],main="Politicos por estado",radius=3.2)
 
