@@ -22,5 +22,5 @@ lista_tabela <- site %>%
 str(lista_tabela)
 
 head(lista_tabela[[1]], 10)
-
-pie(table(lista_tabela[[1]]$Estado),radius=2.5)
+dump(table(lista_tabela[[1]]$Estado))
+pie3D(table(lista_tabela[[1]][2]),labels=table(lista_tabela[[1]]$Estado),radius=4.5,explode=0.9)
