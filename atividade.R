@@ -1,5 +1,3 @@
-
-
 library('rvest')
 
 url <- 'https://pratics.org/representantes_estado.html'
